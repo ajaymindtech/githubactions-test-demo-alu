@@ -1,12 +1,12 @@
 name: Python cicd
 # set the name of your workflow .
-On:
+on:
   Push:
     branches:
-      - main
+      - master
 # on is keyword defines the events that trigger the workflow. in this case the workflow runs every push to main branch
 
-Jobs:
+jobs:
 # section is where you define one or more jobs that should be executed in the workflow
   test:
      name: Test
@@ -17,14 +17,14 @@ Jobs:
 
       steps:
         - name: Checkout code 
-          uses: actions/checkout@2 
+          uses: actions/checkout@v3
 # steps: is an array  of steps the define the indivisual tasks to be performed in the job 
 # checout code : is the name of this step. and uses specified the githubactions to use.---> which checks out your repositorys code
 
         - name: Set up Python
-          uses: actions/setup-python@v2
+          uses: actions/setup-python@v3
           with:
-            python-version: 3.8
+            python-version: 3.10
 
 # this step the python environment  using the actions/setup-python action. it specifies that the python version 3.8 should be used.
 
