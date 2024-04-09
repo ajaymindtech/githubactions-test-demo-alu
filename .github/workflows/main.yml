@@ -8,7 +8,7 @@ on:
 
 jobs:
 # section is where you define one or more jobs that should be executed in the workflow
-  test:
+  build:
      name: Test
      runs-on: ubuntu-latest
 # test is the  name of the job,which is displayed  in the github actionss UI.
