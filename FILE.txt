@@ -1,0 +1,92 @@
+# Name:  Python cicd 
+# On: 
+#   Push:
+#     branches:
+#        - main
+
+# Jobs:
+#   test:
+#      name: test
+#     runs-on : ubuntu-latest
+    
+#     steps:
+#     -  name: Checkout code 
+#        uses: actions/checkout@v2
+
+#   -   name: Set up Python
+#       uses: actions/setup-python@v2
+#      with:
+#          python-version: 3.8
+
+# 	Name: install depenencies
+# 	Run:|  
+# 	     python -m pip install -- upgrade pip
+# 	     pip install -r  requirements.txt
+	
+# 	-name:  Run tests
+# 	  run: |
+# 	     python -m unittest discover 
+
+
+GITHUBRunners:
+----> github provides a pool of virtual machines known as runners to executed workflow.
+----> runners are responible for running jobs and step defined  in your workflow
+----> here ubuntu-latest runner. 
+
+customize the runner:
+runs-on: ubuntu-22.04 /windows-latest / macos-latest / self-hosted agent 
+
+
+echo "# githubactions-test-demo-alu" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/ajaymindtech/githubactions-test-demo-alu.git
+git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
