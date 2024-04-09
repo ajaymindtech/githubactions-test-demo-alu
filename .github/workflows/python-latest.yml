@@ -28,7 +28,9 @@ jobs:
       run: |
         python -m unittest discover
     - name: Test Slack Webhook with Curl
-      run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' ${{ secrets.SLACK_WEBHOOK }}
+      run: |
+        curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' ${{ secrets.SLACK_WEBHOOK }}
+      
       
   slackNotification:
       name: Slack Notification
